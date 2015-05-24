@@ -1,0 +1,13 @@
+<menu>
+    <menuitem label='Consulta '>
+        <menu>
+            <menuitem label='Produtos'>
+                <action>AlphabeticalListOfProductsList</action>
+            </menuitem>
+            <menuitem label='Welcome page'>
+                <icon>app/images/ico_wellcome.png</icon>
+                <action>WelcomeView</action>
+            </menuitem>
+        </menu>
+    </menuitem>
+</menu>
