@@ -9,7 +9,6 @@ class Territories extends TRecord
     const PRIMARYKEY= 'TerritoryID';
     const IDPOLICY =  'max'; // {max, serial}
     
-    
     private $region;
 
     /**
@@ -31,7 +30,7 @@ class Territories extends TRecord
     public function set_region(Region $object)
     {
         $this->region = $object;
-        $this->regionID = $object->id;
+        $this->RegionID = $object->id;
     }
     
     /**
@@ -43,10 +42,10 @@ class Territories extends TRecord
     {
         // loads the associated object
         if (empty($this->region))
-            $this->region = new Region($this->regionID);
+            $this->region = new Region($this->RegionID);
     
         // returns the associated object
-        return $this->region;
+        return $this->region->RegionDescription;
     }
     
 

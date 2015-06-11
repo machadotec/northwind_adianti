@@ -9,7 +9,6 @@ class Region extends TRecord
     const PRIMARYKEY= 'RegionID';
     const IDPOLICY =  'max'; // {max, serial}
     
-    
     /**
      * Constructor method
      */
@@ -33,7 +32,5 @@ class Region extends TRecord
         {
             new TMessage('error',$e->getMessage());
         }
-    }
-
-
+    }    
 }

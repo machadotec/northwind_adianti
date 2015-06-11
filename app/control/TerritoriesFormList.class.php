@@ -32,6 +32,7 @@ class TerritoriesFormList extends TStandardFormList
         $TerritoryID                    = new TEntry('TerritoryID');
         $TerritoryDescription           = new TEntry('TerritoryDescription');
         $RegionID                       = new TCombo('RegionID');
+        
         $region = new Region();
         $itens_region = array();
         $rs_region = $region->get_all_regions();
@@ -46,11 +47,7 @@ class TerritoriesFormList extends TStandardFormList
         $this->form->addQuickField('TerritoryID', $TerritoryID,  200);
         $this->form->addQuickField('TerritoryDescription', $TerritoryDescription,  200);
         $this->form->addQuickField('RegionID', $RegionID,  100);
-
-
-
-
-        
+      
         // create the form actions
         $this->form->addQuickAction(_t('Save'), new TAction(array($this, 'onSave')), 'ico_save.png');
         $this->form->addQuickAction(_t('New'),  new TAction(array($this, 'onEdit')), 'ico_new.png');
@@ -59,12 +56,10 @@ class TerritoriesFormList extends TStandardFormList
         $this->datagrid = new TQuickGrid;
         $this->datagrid->setHeight(320);
         
-
         // creates the datagrid columns
         $TerritoryID = $this->datagrid->addQuickColumn('TerritoryID', 'TerritoryID', 'left', 200);
         $TerritoryDescription = $this->datagrid->addQuickColumn('TerritoryDescription', 'TerritoryDescription', 'left', 200);
-        $RegionID = $this->datagrid->addQuickColumn('RegionID', 'RegionID', 'left', 100);
-
+        $RegionID = $this->datagrid->addQuickColumn('RegionID', 'RegionID', 'left', 100);        
         
         // create the datagrid actions
         $edit_action   = new TDataGridAction(array($this, 'onEdit'));

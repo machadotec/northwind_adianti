@@ -4,6 +4,9 @@
             <menuitem label='Categorias'>
                 <action>CategoriesFormList</action>
             </menuitem>
+            <menuitem label='Clientes'>
+                <action>CustomersList</action>
+            </menuitem>
             <menuitem label='Produtos'>
                 <action>AlphabeticalListOfProductsList</action>
             </menuitem>
@@ -12,6 +15,13 @@
             </menuitem>
             <menuitem label='Territórios'>
                 <action>TerritoriesFormList</action>
+            </menuitem>
+        </menu>
+    </menuitem>
+    <menuitem label='Relatórios '>
+        <menu>
+            <menuitem label='Vendas por Categoria'>
+                <action>SalesByCategoryReport</action>
             </menuitem>
         </menu>
     </menuitem>
